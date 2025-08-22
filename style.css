@@ -478,12 +478,11 @@ svg {
 }
 
 .content-section__aside {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
     flex: 0 0 345px ;
 }
-
-/* .content-section__aside > *:not(:last-child) {
-    margin: 0 0 40px;
-} */
 
 .calendar {
     background-color: var(--white);
@@ -955,26 +954,7 @@ svg {
     .header__form {
         flex-grow: 0;
     }
-    .main-section {
-        flex-direction: column;
-    }
-    .main-section__left {
-        flex-basis: auto;
-    }
-}
-
-@media (max-width: 992px) {
-    .wrapper {
-        padding-left: 24px;
-        padding-right: 24px;
-    }
-
-    .header__logo {
-        padding-top: 12px;
-        padding-bottom: 12px;
-        min-width: 100px;
-    }
-
+    
     .header__burger {
         display: flex;
         justify-content: center;
@@ -1001,6 +981,26 @@ svg {
     .header__burger--open .close {
         display: block;
     }
+    .main-section {
+        flex-direction: column;
+    }
+    .main-section__left {
+        flex-basis: auto;
+    }
+}
+
+@media (max-width: 992px) {
+    .wrapper {
+        padding-left: 24px;
+        padding-right: 24px;
+    }
+
+    .header__logo {
+        padding-top: 12px;
+        padding-bottom: 12px;
+        min-width: 100px;
+    }
+
     .slide {
         height: 300px;
     }
@@ -1016,8 +1016,7 @@ svg {
     }
 
     .content-section__aside {
-        display: flex;
-        gap: 40px;
+        flex-direction: row;
         flex-wrap: wrap;
         flex: 0 1 auto;
     }
